@@ -5,29 +5,28 @@ body {
     color: #eee;
 }
 
+/* --- HEADER --- */
+
 header {
-    background: #000;
+    background: #1c1c24; /* Diskret, mörk gråblå ton */
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #444;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    border-bottom: 2px solid #333;
 }
 
 header h1 {
     margin: 0;
     font-size: 32px;
     letter-spacing: 2px;
+    color: #f1f1f1;
 }
 
 nav {
-    text-align: center;
     margin-top: 10px;
 }
 
 nav a {
-    color: #fff;
+    color: #dcdcdc;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
@@ -35,25 +34,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #1db954;
+    color: #1db954; /* Grön highlight */
 }
 
-.hero {
-    height: 350px;
-    background: url('https://images.unsplash.com/photo-1511376777868-611b54f68947?auto=format&fit=crop&w=1400&q=80') 
-        center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero h2 {
-    background: rgba(0,0,0,0.6);
-    padding: 20px 40px;
-    border-radius: 10px;
-    font-size: 36px;
-}
+/* --- CONTENT --- */
 
 .content {
     padding: 40px 20px;
@@ -61,23 +45,39 @@ nav a:hover {
     margin: auto;
 }
 
-.service {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #333;
-    transition: transform 0.3s;
+h2 {
+    margin-top: 40px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
 }
 
-.service:hover {
-    transform: scale(1.02);
+/* --- MEDIA SLOTS --- */
+
+.media-slot {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #333;
+    transition: transform 0.3s, border-color 0.3s;
 }
+
+.media-slot:hover {
+    transform: scale(1.01);
+    border-color: #1db954;
+}
+
+.media-slot h3 {
+    margin-top: 0;
+}
+
+/* --- FOOTER --- */
 
 footer {
     text-align: center;
     padding: 20px;
     background: #000;
     margin-top: 40px;
-    border-top: 2px solid #444;
+    border-top: 2px solid #333;
+    color: #aaa;
 }
