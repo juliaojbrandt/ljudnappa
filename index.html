@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundWave Media</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #eee;
+        }
+
+        header {
+            background: #000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #444;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #1db954; /* Spotify-grön för ljud vibe */
+        }
+
+        .hero {
+            height: 350px;
+            background: url('https://images.unsplash.com/photo-1511376777868-611b54f68947?auto=format&fit=crop&w=1400&q=80') 
+                center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            background: rgba(0,0,0,0.6);
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 36px;
+        }
+
+        .content {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .service {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            transition: transform 0.3s;
+        }
+
+        .service:hover {
+            transform: scale(1.02);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            margin-top: 40px;
+            border-top: 2px solid #444;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>SoundWave Media</h1>
+        <nav>
+            <a href="#tjanster">Tjänster</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Professionellt ljud för film, TV och digitala produktioner</h2>
+    </div>
+
+    <div class="content">
+        <h2 id="tjanster">Våra tjänster</h2>
+
+        <div class="service">
+            <h3>Ljudmix & Sound Design</h3>
+            <p>Vi skapar ljudbilder som förstärker känslor och berättelser.</p>
+        </div>
+
+        <div class="service">
+            <h3>Fältinspelning</h3>
+            <p>Högkvalitativ inspelning av dialog, atmosfärer och effekter.</p>
+        </div>
+
+        <div class="service">
+            <h3>Postproduktion</h3>
+            <p>Rensning, restaurering, mastering och leverans enligt EBU R128.</p>
+        </div>
+
+        <h2 id="kontakt">Kontakt</h2>
+        <p>Maila oss på <strong>kontakt@soundwave.se</strong>.</p>
+    </div>
+
+    <footer>
+        © 2025 SoundWave Media – All Rights Reserved
+    </footer>
+
+    <script>
+        // Enkel JS-effekt: ändra rubrikfärg vid scroll
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector("header");
+            if (window.scrollY > 50) {
+                header.style.background = "#111";
+            } else {
+                header.style.background = "#000";
+            }
+        });
+    </script>
+</body>
+</html>
