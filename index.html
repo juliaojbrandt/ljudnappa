@@ -1,57 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ljudnappa</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ljudnappa — Portfolio</title>
+  <style>
+    :root{ --bg:#fff; --text:#111; --muted:#666; --accent:#000; }
+    *{box-sizing:border-box}
+    body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:var(--text); background:var(--bg); -webkit-font-smoothing:antialiased}
+    .container{max-width:980px; margin:48px auto; padding:0 20px}
+    header{display:flex; gap:24px; align-items:center; margin-bottom:28px}
+    .logo{font-weight:700; font-size:34px; letter-spacing: -0.02em}
+    .subtitle{color:var(--muted); font-size:14px}
+    .hero-img{width:96px; height:96px; background:#eee; border-radius:8px; display:block}
 
-    <link rel="stylesheet" href="styles.css?v=1">
+    .contact{margin-left:auto; text-align:right; font-size:14px}
+    .contact a{color:var(--muted); text-decoration:none}
+
+    .projects-filter{display:flex; gap:10px; margin:18px 0 8px}
+    .chip{border:1px solid #ddd; padding:6px 10px; border-radius:999px; font-size:13px; cursor:pointer}
+    .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:18px}
+    @media (max-width:700px){ .grid{grid-template-columns:1fr} header{flex-direction:column; align-items:flex-start} .contact{margin-left:0} }
+
+    .card{padding:14px; border-radius:8px; border:1px solid #f0f0f0; display:flex; gap:12px; align-items:flex-start}
+    .thumb{width:110px; height:80px; background:#f3f3f3; border-radius:6px}
+    .card h3{margin:0 0 6px; font-size:16px}
+    .meta{color:var(--muted); font-size:13px; margin-bottom:8px}
+    .excerpt{font-size:14px; color:#222}
+
+    footer{margin:48px 0 120px; color:var(--muted); font-size:13px}
+
+    /* minimal player placeholder */
+    .player{width:100%; height:52px; border:1px dashed #ddd; border-radius:6px; display:flex; align-items:center; justify-content:center; color:var(--muted); background:linear-gradient(180deg, rgba(0,0,0,0.01), transparent)}
+
+  </style>
 </head>
-
 <body>
+  <div class="container">
     <header>
-        <h1>Ljudnappa</h1>
-        <nav>
-            <a href="#media">Media</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
+      <div>
+        <div class="logo">Ljudnappa</div>
+        <div class="subtitle">music producer — ljuddesigner — musician</div>
+      </div>
+      <img class="hero-img" alt="profil" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect rx='8' ry='8' width='100%' height='100%' fill='%23e9e9e9'/><text x='50%' y='52%' font-size='12' text-anchor='middle' fill='%23999' font-family='Arial' dy='.35em'>bild</text></svg>">
+
+      <div class="contact">
+        <div>Kontakt</div>
+        <div><a href="mailto:info@ljudnappa.se">info@ljudnappa.se</a></div>
+        <div style="margin-top:8px"><a href="#">Instagram</a> • <a href="#">Spotify</a></div>
+      </div>
     </header>
 
-    <div class="content">
-        <h2 id="media">Lyssna på våra ljudproduktioner</h2>
+    <section>
+      <h2 style="margin:0 0 8px">Projekt &amp; arbete</h2>
+      <div class="projects-filter" aria-hidden>
+        <div class="chip">show all</div>
+        <div class="chip">production</div>
+        <div class="chip">sound design</div>
+        <div class="chip">mixing</div>
+      </div>
 
-        <!-- MEDIA SLOT 1 -->
-        <div class="media-slot">
-            <h3>TBA 1</h3>
-            <!-- Fyll i ljudspelare eller text här senare -->
-            <p><em>TBA</em></p>
-        </div>
+      <div class="grid" id="projects">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="thumb" aria-hidden></div>
+          <div>
+            <h3>Boule <span style="color:var(--muted); font-weight:400">— Single, 2025</span></h3>
+            <div class="meta">Musiker, artist, produktion, låtskrivande, mix</div>
+            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+            <!-- MEDIA PLAYER PLACEHOLDER -->
+            <div class="player" aria-label="Media player placeholder">MEDIA PLAYER (lämnad tom)</div>
+          </div>
+        </article>
 
-        <!-- MEDIA SLOT 2 -->
-        <div class="media-slot">
-            <h3>TBA 2</h3>
-            <p><em>TBA</em></p>
-        </div>
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="thumb" aria-hidden></div>
+          <div>
+            <h3>Härifrån <span style="color:var(--muted); font-weight:400">— Album, 2025</span></h3>
+            <div class="meta">Production, musician &amp; mix</div>
+            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero.</p>
+            <div class="player" aria-label="Media player placeholder">MEDIA PLAYER (lämnad tom)</div>
+          </div>
+        </article>
 
-        <!-- MEDIA SLOT 3 -->
-        <div class="media-slot">
-            <h3>TBA 3</h3>
-            <p><em>TBA</em></p>
-        </div>
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="thumb" aria-hidden></div>
+          <div>
+            <h3>Mera mer av <span style="color:var(--muted); font-weight:400">— Single, 2025</span></h3>
+            <div class="meta">Artist, produktion, mix</div>
+            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            <div class="player" aria-label="Media player placeholder">MEDIA PLAYER (lämnad tom)</div>
+          </div>
+        </article>
 
-        <!-- MEDIA SLOT 4 -->
-        <div class="media-slot">
-            <h3>TBA 4</h3>
-            <p><em>TBA</em></p>
-        </div>
+        <!-- Card 4 -->
+        <article class="card">
+          <div class="thumb" aria-hidden></div>
+          <div>
+            <h3>Last Night The First Night <span style="color:var(--muted); font-weight:400">— EP, 2024</span></h3>
+            <div class="meta">Artist, produktion, mix</div>
+            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus, tellus eget.</p>
+            <div class="player" aria-label="Media player placeholder">MEDIA PLAYER (lämnad tom)</div>
+          </div>
+        </article>
 
-        <h2 id="kontakt">Kontakt</h2>
-        <p>Maila oss på <strong>m a n s @ l j u d n a p p a . s e </strong>.</p>
-    </div>
+      </div>
+
+      <div style="margin-top:12px">
+        <button id="showAllBtn" style="padding:8px 12px; border-radius:6px; border:1px solid #ddd; background:white; cursor:pointer">Visa alla</button>
+      </div>
+    </section>
 
     <footer>
-        © 2025 Ljudnappa – All Rights Reserved
+      <p>Short tunes for film, radio drama and theatre. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>© <span id="year"></span> Ljudnappa — All rights reserved</p>
     </footer>
+  </div>
 
+  <script>
+    // small interactive bits: update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Show all button demo (no network)
+    document.getElementById('showAllBtn').addEventListener('click', function(){
+      alert('Detta är en placeholder för att ladda fler projekt. Lägg till din logik här.');
+    });
+
+    // Accessibility: keyboard focus for chips (visual not included)
+    document.querySelectorAll('.chip').forEach(function(c){
+      c.setAttribute('tabindex','0');
+      c.addEventListener('keypress', function(e){ if(e.key === 'Enter'){ c.click(); }});
+    });
+  </script>
 </body>
 </html>
